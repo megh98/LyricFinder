@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch, HashRouter } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 import Navbar from "./components/layout/Navbar";
 import Index from "./components/layout/Index";
@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <Provider>
-        <HashRouter basename='/'>
+        <Router>
           <React.Fragment>
             <Navbar />
             <div className="container">
@@ -23,7 +23,7 @@ class App extends Component {
               </Switch>
             </div>
           </React.Fragment>
-        </HashRouter>
+        </Router>
       </Provider>
     );
   }
